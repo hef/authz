@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM rust:1.81.0 AS chef
+FROM --platform=$BUILDPLATFORM rust:1.82.0 AS chef
 RUN apt-get update && apt-get install -y clang curl llvm lld musl-tools gcc-multilib g++-multilib protobuf-compiler
 RUN rustup target add aarch64-unknown-linux-musl
 RUN rustup target add x86_64-unknown-linux-musl
